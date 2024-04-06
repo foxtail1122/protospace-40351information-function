@@ -1,0 +1,15 @@
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= link_to current_user.name + "さん、こんにちは",  class: :greeting__link %>
+      </div>
+    <% else %>
+      <%= link_to "新規登録", new_user_registration_path %>
+      <%= link_to "ログイン", user_session_path %>
+    <% end %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    </div>
+  </div>
+</main>
