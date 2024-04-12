@@ -4,9 +4,6 @@
       <div class="greeting">
         <%= link_to "こんにちは" + current_user.name + "さん!", user_path(id: current_user), class: :greeting__link %>
       </div>
-    <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-      <%= link_to "ログイン", user_session_path %>
     <% end %>
     <div class="card__wrapper">
       <%= render partial: 'prototype', collection: @prototypes %>
